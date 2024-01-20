@@ -1,0 +1,118 @@
+body{
+    margin:0;
+    font-family: Arial;
+    background-color: rgb(15,15,15);
+    color:white;
+}
+
+.heading{
+    font-size: 50px;
+    font-family: Papyrus,'Quicksand',serif;
+    font-weight: bold;
+    margin: 120px 100px 0 100px;
+    border-bottom: 2px solid whitesmoke;
+}
+
+.main{
+    display: grid;
+    grid-template-columns: 5fr 2.4fr;
+    column-gap: 40px;
+    padding: 0px 100px;
+}
+
+.items{
+  padding-top: 30px;
+}
+.item{
+  padding:20px;
+  display: grid;
+  background-color: #232123;
+  grid-template-columns: 1fr 0.6fr;
+  border: 2px solid black;
+  border-radius: 30px;
+  margin-bottom: 30px;
+}
+.item img{
+  max-width: 100%;
+  border-radius: 20px;
+  max-height: 350px;
+  margin: auto;
+}
+.item-info-head{
+    display: flex;
+    flex-direction: column;
+    font-family:'Courier New', Courier, monospace;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    position: relative;
+}
+.item-info-head u{
+  font-size: 12px;
+  font-family: Arial;
+  color: rgb(200, 0, 0);
+  position: absolute;
+  bottom:7px;
+  right:10px;
+  cursor: pointer;
+}
+.item-value{padding: 30px;}
+
+.item-value-calc{
+    border: 1px solid rgba(255,255,255,0.3);
+    border-radius: 20px;
+    padding: 20px;
+    background-color: #3D4849;
+}
+
+.item-net{
+  display: flex;
+  justify-content: space-between;
+}
+.item-value-calc button{
+  width: 100%;
+  background-color: rgba(255,255,255,0.3);
+  border-radius: 24px;
+  height:48px;
+  color:white;
+  border: none;
+  font-size: 16px;
+  font-weight: 600;
+  margin-top: 25px;
+  cursor: pointer;
+}
+
+.removeAll{
+  font-size: 15px;
+  font-family: Arial;
+  color: rgb(200, 0, 0);
+  text-decoration: underline;
+  cursor: pointer;
+  text-align: right;
+  margin: 15px 100px 20px 0px;
+}
+
+.sortFunction{margin: -25px 0px 0px 150px;}
+
+.sortFunction select{
+  height: 30px;
+  border-radius: 2px;
+  padding: 0px 5px;
+  cursor: pointer;
+  background-color: white;
+}
+.sortFunction #order{width: 110px;}
+.sortFunction #sortBy{width: 150px;}
+.sort-head{
+  margin-bottom: -30px;
+  font-family: Papyrus;
+}
+.buttonSort{
+  padding: 10px 15px;
+  border-radius: 17px;
+  border:none;
+  background-color: rgb(24, 5, 196);
+  color:white;
+  font-weight: bold;
+  font-size: 14px;
+}

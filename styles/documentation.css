@@ -1,0 +1,22 @@
+body{
+    margin:0;
+    margin-top: 120px;
+}
+
+.heading,.sub-heading{
+    font-family: Papyrus,'Quicksand',sans-serif;
+    margin: 0px 60px;
+}
+
+.heading{font-size: 50px;}
+.sub-heading{
+    font-size: 38px;
+    text-decoration: underline 2px;
+    margin-top: 50px;
+}
+
+.content{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+    margin: 0 80px 0 65px;
+}

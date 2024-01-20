@@ -1,0 +1,61 @@
+body{
+    margin:0;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.categories{
+    display: grid;
+    grid-template-columns: repeat(2,470px);
+    column-gap: 80px;
+    justify-content: center;
+    margin: 120px 70px 0px 70px;
+}
+.premium-items{
+    height: 680px;
+    border-radius: 50px;
+    padding: 20px;
+    transition: 0.15s;
+    border: 1px solid lightgray;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+.premium-items:hover{
+    box-shadow: rgba(22, 22, 26, 0.08) 0px 0px 0px 2px inset;
+}
+
+.premium-items img{
+    width:100%;
+    height: 40%;
+    border-radius: 35px;
+}
+.heading{
+    font-size: 40px;
+    font-weight: 500;
+    margin: 20px auto;
+}
+.benefits{
+    font-size: 25px;
+    margin-left: 15px;
+}
+.premium-items ul{
+    font-size: 18px;
+    height: 125px;
+}
+
+.price{
+    font-size: 25px;
+    margin: 0px auto;
+    margin-bottom: 20px;
+}
+
+.premium-items button{
+    background-color: black;
+    border-radius: 24px;
+    height:48px;
+    color:white;
+    border: none;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+}
+.premium-items button:active{transform: translateY(1px);}

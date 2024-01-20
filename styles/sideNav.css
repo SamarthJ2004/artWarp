@@ -1,0 +1,46 @@
+.sidenav {
+    padding-top: 120px;
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 75px;
+    left: 0;
+    background-color: #111111d3;
+    overflow-x: hidden;
+    transition: 0.5s;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    text-align: center;
+    font-family:'Courier New', Courier, monospace;
+}
+
+.sidenav p{
+    font-size: 45px;
+    font-weight: bold;
+    color: white;
+    padding-bottom: 20px;
+}
+
+.sidenav a {
+    padding: 8px 0px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #9e9e9e;
+    display: block;
+    transition: 0.3s;
+}
+  
+.sidenav a:hover{
+    color: #f1f1f1;
+    font-size: 27px;
+}
+  
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+  

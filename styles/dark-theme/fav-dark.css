@@ -1,0 +1,102 @@
+body{
+    margin-top: 120px;
+    background-color: rgb(15,15,15);
+    color:white;
+}
+
+.fav{
+    display: flex;
+    justify-content: space-between;
+    margin: 50px 70px 40px 70px;
+    font-size: 50px;
+    font-weight: bold;
+    font-family: Papyrus,'Quicksand',serif;
+    border-bottom: 2px solid whitesmoke;
+}
+
+.fav-items{
+    margin:50px 70px 0px 70px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 30px;
+}
+
+.item{
+    padding:15px;
+    display: grid;
+    grid-template-columns: 1fr 0.6fr;
+    border: 1px solid rgba(255,255,255,0.3);
+    background-color: #232123;
+    border-radius: 30px;
+    margin-bottom: 20px;
+}
+.item img{
+    max-width: 100%;
+    border-radius: 20px;
+    max-height: 370px;
+    margin: auto;
+}
+
+.item-info-head{
+    display: flex;
+    flex-direction: column;
+    font-family:'Courier New', Courier, monospace;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    position: relative;
+}
+.js-remove,.js-sell{
+    font-size: 12px;
+    font-family: Arial;
+    color: rgb(200,0,0);
+    position: absolute;
+    bottom:7px;
+    right:10px;
+    cursor: pointer;
+}
+
+.js-cart-fav{
+    font-size: 12px;
+    font-family: Arial;
+    color: rgb(200,0,0);
+    position: absolute;
+    bottom:7px;
+    right:70px;
+    cursor: pointer;
+}
+
+.removeAll{
+    font-size: 15px;
+    font-family: Arial;
+    color: rgb(200,0,0);
+    text-decoration: underline;
+    cursor: pointer;
+    text-align: right;
+    margin: -25px 75px 35px 0px;
+}
+
+.sortFunction{margin: -30px 0px 0px 100px;}
+
+.sortFunction select{
+    height: 30px;
+    border-radius: 2px;
+    padding: 0px 5px;
+    cursor: pointer;
+    background-color: white;
+  }
+  .sortFunction #order{width: 110px;}
+  .sortFunction #sortBy{width: 150px;}
+  .sort-head{
+    margin-bottom: -30px;
+    font-family: Papyrus;
+  }
+  .buttonSort{
+    padding: 10px 15px;
+    border-radius: 17px;
+    border:none;
+    background-color: rgb(24, 5, 196);
+    color:white;
+    font-weight: bold;
+    font-size: 14px;
+  }
