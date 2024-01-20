@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head id="mainHead">
+
+        <title>Collection Anime</title>
+        <link rel="icon" href="styles/images/collection-logo-back/anime-logo.jpeg" type="image/icon type">
+        <link id="latest-theme" rel="stylesheet" href="styles/nft-latest.css">
+
+    </head>
+    <body>
+
+        <nav></nav>
+        <div id="mySideNav" class="sidenav"></div>
+
+        <div class="space-hero">
+            <div class="space-hero-img">
+                <img class='hero_img' src="images/anime/hero.jpeg">
+                <img class="title_img" src="styles/images/collection-logo-back/anime-logo.jpeg">
+            </div>
+            <div class="space-hero-heading">
+                Anime- An Epic Adventure Beyond Imagination
+                <div class="sortFunction"></div>
+            </div>
+        </div>
+
+        <div class="item-block"></div>
+
+        <footer></footer>
+
+        <script src="javascript/head.js"></script>
+        <script src="javascript/sideNav.js"></script>
+        <script type='module' src="javascript/homepage/renderNavbar.js"></script>
+        <script type='module' src="javascript/homepage/renderFooter.js"></script>
+        <script type="module">
+            import { renderHTML } from './javascript/render.js';
+            import {sortHTML,sortNFT} from "./javascript/sortFunction.js";
+            import { anime } from "./javascript/collection-data.js";
+            renderHTML(anime);
+            
+            sortHTML();
+            document.querySelector(".buttonSort").addEventListener('click',()=>{
+                sortNFT(anime);
+            })
+        </script>
+
+    </body>
+</html>

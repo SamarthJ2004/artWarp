@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head id="mainHead">
+
+        <title>Collection Cars</title>
+        <link rel="icon" href="styles/images/collection-logo-back/cars-logo.png" type="image/icon type">
+        <link id="latest-cars-theme" rel="stylesheet" href="styles/nft-latest cars.css">
+
+    </head>
+    <body>
+
+        <nav></nav>
+        <div id="mySideNav" class="sidenav"></div>
+
+        <div class="space-hero">
+            <div class="space-hero-img">
+                <img class='hero_img' src="images/cars/hero.png">
+                <img class="title_img" src="styles/images/collection-logo-back/cars-logo.png">
+            </div>
+            <div class="space-hero-heading">
+                Cars- Truely Furious
+                <div class="sortFunction"></div>
+            </div>
+        </div>
+
+        <div class="item-block"></div>
+
+        <footer></footer>
+
+        <script src="javascript/head.js"></script>
+        <script src="javascript/sideNav.js"></script>
+        <script type='module' src="javascript/homepage/renderNavbar.js"></script>
+        <script type='module' src="javascript/homepage/renderFooter.js"></script>
+        <script type="module">
+            import {renderCars} from "./javascript/render-cars.js";
+            import {sortHTML,sortNFT} from "./javascript/sortFunction.js";
+            import { cars } from "./javascript/collection-data.js";
+            renderCars(cars);
+            
+            sortHTML();
+            document.querySelector(".buttonSort").addEventListener('click',()=>{
+                sortNFT(cars);
+            })
+        </script>
+
+    </body>
+</html>

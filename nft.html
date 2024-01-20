@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+    <head id="mainHead">
+
+        <title>NFT marketplace-ArtWarp</title>
+        <link rel="icon" href="images/logo/logo only.png" type="image/icon type">
+
+        <link id="nft-theme" rel="stylesheet" href="styles/nft.css">
+        <link id="collection-theme" rel="stylesheet" href="styles/nft-collection.css">
+        <link id="subscribe-theme" rel="stylesheet" href="styles/nft-subscribe.css">
+        <link id="latest-theme" rel="stylesheet" href="styles/nft-latest.css">
+    </head>
+    <body>
+        <button onclick="topFunction()" id="topBtn">&#8593;</button>
+
+        <nav></nav>
+
+        <div id="mySideNav" class="sidenav"></div>
+
+        <div class="hero-heading">
+            <div class="hero-heading-css">Welcome to Your<br>
+                World of NFTs </div>
+        </div>
+
+        <div class="latest-drops">
+
+            <div class="latest-drops-heading">
+                Latest Drops
+            </div>
+
+            <div class="item-block"></div>
+
+        </div>
+
+        <div class="introducing">
+
+            <div class="intro-heading">
+                artWarp
+            </div>
+
+            <div class="intro-artWarp">
+                <div class="intro-artWarp-img">
+                    <img id="intro-logo" src="images/logo/logo-removebg.png">
+                </div>
+                <div class="intro-content">
+                    "Where Digital Dreams Become Tangible Treasures: Discover Your nft Haven!"
+                </div>
+            </div>
+
+        </div>
+
+        <div class="collection"></div>
+
+        <div class="subscribe">
+            <h2 class="line1">Never miss a drop</h2>
+            <div class="line2">Subscribe for the latest news, drops & collectibles</div>
+            <div class="subscribe-input">
+                <input class="subscribe-input-box" placeholder="Email">
+                <button>Subscribe</button>
+            </div>
+        </div>
+
+        <footer></footer>
+
+        <script src="javascript/head.js"></script>
+        <script src="javascript/sideNav.js"></script>
+        <script type="module" src="javascript/homepage/renderNavbar.js"></script>
+        <script type="module" src="javascript/homepage/nft-latestdrops.js"></script>
+        <script type="module" src="javascript/homepage/nft-collection.js"></script>
+        <script type='module' src="javascript/homepage/renderFooter.js"></script>
+        <script>
+            let mybutton = document.getElementById("topBtn");
+            let id;
+            let j=0;
+            window.onscroll=function(){
+                setTimeout(scrollFunc,300);
+                scrollFunction();
+            };
+
+            function scrollFunc(){
+                const x=window.scrollY>1130 && window.scrollY<2200;
+                if (!j){
+                    if (x){
+                        j=1;
+                        document.querySelector(".intro-content").innerHTML='';
+                        var i = 0;
+                        var txt = "Where Digital Dreams Become Tangible Treasures: Discover Your nft Haven!";
+                        var speed =70;
+                        typeWriter();
+                        function typeWriter(){
+                            if (i < txt.length) {
+                                document.querySelector(".intro-content").innerHTML += txt.charAt(i);
+                                i++;
+                                id=setTimeout(typeWriter, speed);
+                            }
+                        }
+                    }
+                }else if(!x){
+                    j=0;
+                    clearTimeout(id);
+                }
+            };
+            function scrollFunction() {
+                if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
+                    mybutton.style.display = "block";
+                } else {
+                    mybutton.style.display = "none";
+                }
+            }
+            function topFunction() {
+                document.body.scrollTop = 0;
+                document.documentElement.scrollTop = 0;
+            }
+        </script>
+        
+    </body>
+</html>

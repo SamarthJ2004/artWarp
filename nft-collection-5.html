@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head id="mainHead">
+
+        <title>Collection City</title>
+        <link rel="icon" href="styles/images/collection-logo-back/city-logo.jpeg" type="image/icon type">
+        <link id="latest-theme" rel="stylesheet" href="styles/nft-latest.css">
+
+    </head>
+    <body>
+
+        <nav></nav>
+        <div id="mySideNav" class="sidenav"></div>
+
+        <div class="space-hero">
+            <div class="space-hero-img">
+                <img class='hero_img' src="images/city/hero.jpeg">
+                <img class="title_img" src="styles/images/collection-logo-back/city-logo.jpeg">
+            </div>
+            <div class="space-hero-heading">
+                City Life- From A Changed Perspective
+                <div class="sortFunction"></div>
+            </div>
+        </div>
+
+        <div class="item-block"></div>
+
+        <footer></footer>
+
+        <script src="javascript/head.js"></script>
+        <script src="javascript/sideNav.js"></script>
+        <script type="module" src="javascript/homepage/renderNavbar.js"></script>
+        <script type='module' src="javascript/homepage/renderFooter.js"></script>
+        <script type="module">
+            import { renderHTML } from './javascript/render.js';
+            import {sortHTML,sortNFT} from "./javascript/sortFunction.js";
+            import { city } from "./javascript/collection-data.js";
+            renderHTML(city);
+            
+            sortHTML();
+            document.querySelector(".buttonSort").addEventListener('click',()=>{
+                sortNFT(city);
+            });
+        </script>
+    </body>
+</html>

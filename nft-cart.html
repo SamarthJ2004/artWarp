@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Diphylleia&family=Great+Vibes&family=Quicksand&display=swap" rel="stylesheet">
+  <title>Cart</title>
+  <link rel="icon" href="images/logo/logo only.png" type="image/icon type">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link id="cart-theme" rel="stylesheet" href="styles/cart.css">
+  <link id="nav-theme" rel="stylesheet" href="styles/nft-nav.css">
+  <link id="footer-theme" rel="stylesheet" href="styles/nft-footer.css">
+  <link rel="stylesheet" href="styles/sideNav.css">
+
+</head>
+<body>
+    <nav></nav>
+    <div id="mySideNav" class="sidenav"></div>
+
+    <div class="heading">Review Your Cart</div>
+    <div class="removeAll">REMOVE ALL</div>
+    <div class="sortFunction"></div>
+    <div class="main">
+      <div class="items"></div>
+
+      <div class="item-value">
+
+        <div class="item-value-calc">
+          <div class="item-net">
+            <div>Total Items:</div>
+            <div class="js-count-cart"></div>
+          </div>
+          <div class="item-net">
+            <div>Total Amount:</div>
+            <div class="js-price-cart"></div>
+          </div>
+
+          <button id="buyButton">Proceed To Buy</button>
+        </div>
+
+      </div>
+    </div>
+
+    <footer></footer>
+
+    <script src="javascript/sideNav.js"></script>
+    <script type="module" src="javascript/homepage/renderNavbar.js"></script>
+    <script type="module">
+      import {renderCart,addToProfile,removeAll} from './javascript/cart.js';
+      renderCart();
+      document.querySelector('.removeAll').addEventListener('click',()=>{
+        removeAll();
+      });
+      document.getElementById('buyButton').addEventListener('click',()=>{
+        addToProfile();
+      });
+    </script>
+    <script type="module">
+      import {sortHTML} from "./javascript/sortFunction other.js";
+      import {sortNFT} from "./javascript/cart.js";
+      sortHTML();
+      document.querySelector(".buttonSort").addEventListener('click',()=>{
+          sortNFT();
+      })
+  </script>
+    <script type='module' src="javascript/homepage/renderFooter.js"></script>
+</body>
+</html>
