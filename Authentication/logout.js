@@ -24,7 +24,7 @@ export function logoutFunc(){
             signOut(auth).then(() => {
                 console.log('Sign-out successful.');
                 alert('Sign-out successful.');
-                location.replace('authentication/authentication-login.html');
+                location.replace(`https://${location.hostname}/art-Warp/index.html`);
             }).catch((error) => {
                 console.log('An error happened.');
             });		  		  
