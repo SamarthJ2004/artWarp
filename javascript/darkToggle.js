@@ -20,7 +20,7 @@ export function themeSet(){
         backLightImage();
         function backLightImage(){
             i+=1;
-            document.querySelector(".hero-heading").style.backgroundImage=`url('../styles/images/hero-light/hero${i}.jpeg')`;
+            document.querySelector(".hero-heading").style.backgroundImage=`url('url('https://${location.hostname}/artWarp/styles/images/hero-light/hero${i}.jpeg')`;
             i===4?i=-1:null;
             backId=setTimeout(backLightImage,5000);
         }
@@ -42,7 +42,7 @@ function toDark(){
         backDarkImage();
         function backDarkImage(){
             j+=1;
-            document.querySelector(".hero-heading").style.backgroundImage=`url('../styles/images/hero-dark/hero${j}.jpeg')`;
+            document.querySelector(".hero-heading").style.backgroundImage=`url('url('https://${location.hostname}/artWarp/styles/images/hero-dark/hero${j}.jpeg')`;
             j===5?j=-1:null;
             backId=setTimeout(backDarkImage,5000);
         }
@@ -83,7 +83,7 @@ function toLight(){
         backLightImage();
         function backLightImage(){
             i+=1;
-            document.querySelector(".hero-heading").style.backgroundImage=`url('../styles/images/hero-light/hero${i}.jpeg')`;
+            document.querySelector(".hero-heading").style.backgroundImage=`url('url('https://${location.hostname}/artWarp/styles/images/hero-light/hero${i}.jpeg')`;
             i===4?i=-1:null;
             backId=setTimeout(backLightImage,5000);
         }
